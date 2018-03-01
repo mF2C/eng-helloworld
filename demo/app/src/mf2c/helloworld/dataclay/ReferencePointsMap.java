@@ -47,52 +47,42 @@ public class ReferencePointsMap {
 		// Point( x, y );
 		// P1
 		Point p = new Point(0, 0);
-		p.makePersistent();
 		pc.add(p);
 		
 		// P2
 		p = new Point(500, 0);
-		p.makePersistent();
 		pc.add(p);
 		
 		// P3
 		p = new Point(1000, 0);
-		p.makePersistent();
 		pc.add(p);
 
 		// P4
 		p = new Point(0, 250);
-		p.makePersistent();
 		pc.add(p);
 
 		// P5
 		p = new Point(500, 250);
-		p.makePersistent();
 		pc.add(p);
 
 		// P6
 		p = new Point(1000, 250);
-		p.makePersistent();
 		pc.add(p);
 
 		// P7
 		p = new Point(500, 500);
-		p.makePersistent();
 		pc.add(p);
 
 		// P8
 		p = new Point(0, 750);
-		p.makePersistent();
 		pc.add(p);
 
 		// P9
 		p = new Point(500, 750);
-		p.makePersistent();
 		pc.add(p);
 
 		// P10
 		p = new Point(1000, 750);
-		p.makePersistent();
 		pc.add(p);		
 	}
 }
