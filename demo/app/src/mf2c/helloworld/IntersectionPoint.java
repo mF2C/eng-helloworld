@@ -47,13 +47,12 @@ public class IntersectionPoint {
 			PointCollection pcTemp = new PointCollection();
 			pcTemp.makePersistent(IntersectionResult.DATACLAY_ALIAS);
 			
-			calculateDistance(px, pcref, radius );
+			calculateDistance(px, pcref, radius, pcTemp );
 			
 			// only for COMPSs v1.4
 			COMPSs.waitForAllTasks();
 			
-			PointCollection pcres = PointCollection.getByAlias(IntersectionResult.DATACLAY_ALIAS);
-			System.out.println(pcres);
+			System.out.println(pcTemp);
 			
 			// Finish dataClay session
 			DataClay.finish();
@@ -71,7 +70,7 @@ public class IntersectionPoint {
 		}
 	}
 	
-	public static void calculateDistance(Point px, PointCollection pc, double radius)
+	public static void calculateDistance(Point px, PointCollection pc, double radius, PointCollection pcRes)
 	{
 		int[] points = new int[pc.getPoints().size()];
 
@@ -81,7 +80,6 @@ public class IntersectionPoint {
 			IntersectionImpl.calculate(px.getX(), px.getY(), p.getX(), p.getY(), radius, points, idx );
 		}
 		
-		PointCollection pcRes = PointCollection.getByAlias(IntersectionResult.DATACLAY_ALIAS);
 		System.out.println(pcRes);
 		
 		for( int idx = 0; idx < points.length; idx++ )
